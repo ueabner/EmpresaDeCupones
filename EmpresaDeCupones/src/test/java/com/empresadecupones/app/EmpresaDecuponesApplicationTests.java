@@ -13,12 +13,6 @@ import com.empresadecupones.app.modelo.entity.Usuario;
 import com.empresadecupones.app.repositorio.UsuarioRepositorio;
 
 
-/*
- * Para poder realizar las pruebas es necesario agregrar la ruta "/listar-usuarios"
- *  como un parametro en  antMatchers() del metodo configure
- *  para ser excluida de autorizacion en: jwt/config/SecurityConfig.java
- */
-
 @SpringBootTest
 class EmpresaDecuponesApplicationTests {
 	
