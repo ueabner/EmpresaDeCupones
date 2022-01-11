@@ -28,16 +28,6 @@ public class JwtController {
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
-
-	/*
-	 * *  	Dar de alta usuario para realizar login y obtener token con el sig formato:
-	 * 				{
-					"usuario": "",
-					"contrasena": "",
-					"email": "",
-					"roles": ["",""]
-					}
-	 */
 	@PostMapping("alta-usuario")
 	public ResponseEntity<String> saveUsuario(@RequestBody JwtUsuario usuario) {
 
@@ -46,15 +36,6 @@ public class JwtController {
 		return ResponseEntity.ok(mensaje);
 		
 	}
-
-	
-	/*
-	 * * 	Login para obtener token jwt con el sig formato:
-					{
-					"usuario": "",
-					"contrasena": ""
-					}
-	 */
 
 	@PostMapping("login")
 	public ResponseEntity<JwtUsuarioResponse> login(@RequestBody JwtUsuarioRequest request) {
