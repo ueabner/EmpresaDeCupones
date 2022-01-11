@@ -40,8 +40,7 @@ public class JwtController {
 	@PostMapping("login")
 	public ResponseEntity<JwtUsuarioResponse> login(@RequestBody JwtUsuarioRequest request) {
 
-		authenticationManager
-			.authenticate(new UsernamePasswordAuthenticationToken(request.getUsuario(), request.getContrasena()));
+		authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsuario(), request.getContrasena()));
 		String token = util.generaToken(request.getUsuario());
 		return ResponseEntity.ok(new JwtUsuarioResponse(token, "Token generado exitosamente!"));
 	}
