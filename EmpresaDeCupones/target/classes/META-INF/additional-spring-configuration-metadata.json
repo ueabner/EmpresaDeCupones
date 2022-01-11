@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "jms.jwt.security.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'jms.jwt.security.enabled'"
+  },
+  {
+    "name": "jms.jwt.timezone",
+    "type": "java.lang.String",
+    "description": "A description for 'jms.jwt.timezone'"
+  },
+  {
+    "name": "jms.jwt.token.auth.path",
+    "type": "java.lang.String",
+    "description": "A description for 'jms.jwt.token.auth.path'"
+  },
+  {
+    "name": "jms.jwt.token.expires-in",
+    "type": "java.lang.String",
+    "description": "A description for 'jms.jwt.token.expires-in'"
+  }
+]}
