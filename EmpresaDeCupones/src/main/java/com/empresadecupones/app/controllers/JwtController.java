@@ -40,8 +40,6 @@ public class JwtController {
 	@PostMapping("login")
 	public ResponseEntity<JwtUsuarioResponse> login(@RequestBody JwtUsuarioRequest request) {
 
-		// Validar nombre de usuario/contrasena con DB
-		// (requerido en caso de autenticacion Stateless)
 		authenticationManager
 				.authenticate(new UsernamePasswordAuthenticationToken(request.getUsuario(), request.getContrasena()));
 		String token = util.generaToken(request.getUsuario());
